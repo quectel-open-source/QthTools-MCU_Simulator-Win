@@ -1,0 +1,21 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>icon/switch_close.png</file>
+        <file>icon/switch_open.png</file>
+        <file>icon/first.png</file>
+        <file>icon/checkbox_close.png</file>
+        <file>icon/checkbox_open.png</file>
+        <file>bat/restart.bat</file>
+        <file>icon/zebra_stripes_02.jpg</file>
+        <file>icon/zebra_stripes_01.jpg</file>
+        <file>icon/zebra_stripes_03.png</file>
+    </qresource>
+    <qresource prefix="/">
+        <file>icon/help.chm</file>
+        <file>icon/tools.ico</file>
+        <file>english.qm</file>
+    </qresource>
+    <qresource prefix="/qt">
+        <file>etc/qt.conf</file>
+    </qresource>
+</RCC>
