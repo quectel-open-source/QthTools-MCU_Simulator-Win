@@ -1,0 +1,60 @@
+﻿#include "subwindow.h"
+#include "ui_subwindow.h"
+#include "third/switchbutton.h"
+subwindow::subwindow(QWidget *parent) :
+    QWidget(parent),
+    ui(new Ui::subwindow)
+{
+    ui->setupUi(this);
+    uiAttributeSet();
+}
+
+subwindow::~subwindow()
+{
+    delete ui;
+}
+
+void subwindow::setParm(void *father)
+{
+
+}
+
+void subwindow::uiAttributeSet()
+{
+    ui->tableWidget_subDev->horizontalHeader()->setStretchLastSection(true);
+    ui->tableWidget_subDev->setRowCount(1); //设置行数
+    ui->tableWidget_subDev->setColumnCount(8); //设置列数
+    ui->tableWidget_subDev->setWindowTitle(QString::fromLocal8Bit("子设备列表"));
+    ui->tableWidget_subDev->setSelectionMode(QAbstractItemView::ContiguousSelection);
+
+    QStringList header;
+    header<<QString::fromLocal8Bit("序号")<<QString::fromLocal8Bit("设备PK")<<QString::fromLocal8Bit("设备DK")<<QString::fromLocal8Bit("状态")<< QString::fromLocal8Bit("PS")<< QString::fromLocal8Bit("DS")<< QString::fromLocal8Bit("LifeTime")<< QString::fromLocal8Bit("TLS");
+    ui->tableWidget_subDev->setHorizontalHeaderLabels(header);
+    ui->tableWidget_subDev->horizontalHeader()->setDefaultSectionSize(50);  //设置默认宽度
+    ui->tableWidget_subDev->verticalHeader()->setDefaultSectionSize(30);   //设置一行默认高度
+    ui->tableWidget_subDev->setColumnWidth(1,150);
+    ui->tableWidget_subDev->setColumnWidth(2,150);
+    ui->tableWidget_subDev->setColumnWidth(3,30);
+    ui->tableWidget_subDev->setSortingEnabled(true);
+    ui->tableWidget_subDev->setEditTriggers(QAbstractItemView::NoEditTriggers);
+    SwitchButton *switchButton = new SwitchButton();
+    switchButton->setEnabled(false);
+    ui->tableWidget_subDev->setCellWidget (0,3,switchButton);
+
+    ui->tableWidget_subDev->setColumnHidden(4, true);
+    ui->tableWidget_subDev->setColumnHidden(5, true);
+    ui->tableWidget_subDev->setColumnHidden(6, true);
+    ui->tableWidget_subDev->setColumnHidden(7, true);
+    
+    
+}
+
+void subwindow::on_pushButton_addSubDev_clicked()
+{
+
+}
+
+void subwindow::on_pushButton__delSubDev_clicked()
+{
+
+}

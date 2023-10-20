@@ -1,0 +1,1456 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>modelWindow</class>
+ <widget class="QWidget" name="modelWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>429</width>
+    <height>1114</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QToolTip{
+	min-width: 250px;
+	padding: 3px;
+	font-size:14px;
+	border-style:solid;
+	border-width:1px;	
+	border-color:rgb(229, 231, 234);
+	border-radius:4px;
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_5" stretch="0,0,0">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>36</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>36</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font-size:14px;
+color:rgb(14, 25, 50);
+font-weight:bold;</string>
+       </property>
+       <property name="text">
+        <string>物模型</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1,1,1">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QPushButton" name="pushButton_properties">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>36</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>36</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+color: rgb(155, 160, 172);
+font-size:14px;
+border-style:solid;
+border-width:1px;
+border-color:rgb(229, 231, 234);
+border-radius:0px;
+padding-left:15px;
+padding-right:15px;
+}
+QPushButton:checked
+{
+color: rgb(47, 105, 235);
+font-size:14px;
+border-style:solid;
+border-width:1px;
+border-color:rgb(47, 105, 235);
+border-radius:0px;
+}
+
+QPushButton:hover{
+	color: rgb(47, 105, 235);
+	background-color: rgba(47, 105, 235, 0.08);
+}
+QPushButton:pressed{
+	color: rgb(47, 105, 235);
+	background-color: rgba(47, 105, 235, 0.2);
+}</string>
+         </property>
+         <property name="text">
+          <string>属性</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+         <property name="autoExclusive">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_services">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>36</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>36</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+color: rgb(155, 160, 172);
+font-size:14px;
+border-style:solid;
+border-top-width:1px;
+border-right-width:1px;
+border-bottom-width:1px;
+border-color:rgb(229, 231, 234);
+border-radius:0px;
+padding-left:15px;
+padding-right:15px;
+}
+QPushButton:checked
+{
+color: rgb(47, 105, 235);
+font-size:14px;
+border-style:solid;
+border-width:1px;
+border-color:rgb(47, 105, 235);
+border-radius:0px;
+}
+
+QPushButton:hover{
+	color: rgb(47, 105, 235);
+	background-color: rgba(47, 105, 235, 0.08);
+}
+QPushButton:pressed{
+	color: rgb(47, 105, 235);
+	background-color: rgba(47, 105, 235, 0.2);
+}</string>
+         </property>
+         <property name="text">
+          <string>服务</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="autoExclusive">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_3">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>36</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>36</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+color: rgb(155, 160, 172);
+font-size:14px;
+border-style:solid;
+border-top-width:1px;
+border-right-width:1px;
+border-bottom-width:1px;
+border-color:rgb(229, 231, 234);
+border-radius:0px;
+padding-left:15px;
+padding-right:15px;
+}
+QPushButton:checked
+{
+color: rgb(47, 105, 235);
+font-size:14px;
+border-style:solid;
+border-width:1px;
+border-color:rgb(47, 105, 235);
+border-radius:0px;
+}
+
+QPushButton:hover{
+	color: rgb(47, 105, 235);
+	background-color: rgba(47, 105, 235, 0.08);
+}
+QPushButton:pressed{
+	color: rgb(47, 105, 235);
+	background-color: rgba(47, 105, 235, 0.2);
+}</string>
+         </property>
+         <property name="text">
+          <string>事件</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="autoExclusive">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QStackedWidget" name="tabWidget_model">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>400</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>400</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="stackedWidget_modelPage1">
+      <layout class="QGridLayout" name="gridLayout">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="QTableWidget" name="tableWidget_properties">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QHeaderView::section{
+color: rgb(104, 112, 130);
+font-size:14px;
+background: transparent;
+background: rgb(246, 249, 255);
+padding: 1px;border: none;
+border-style:solid;
+border-right-width:0px;
+border-left-width:0px;
+}
+QTableWidget{
+color: rgb(104, 112, 130);
+font-size:14px;
+border-style:solid;
+border-width:1px;
+border-color:rgb(229, 231, 234);
+border-radius:4px;
+}</string>
+         </property>
+         <property name="verticalScrollMode">
+          <enum>QAbstractItemView::ScrollPerPixel</enum>
+         </property>
+         <attribute name="horizontalHeaderMinimumSectionSize">
+          <number>25</number>
+         </attribute>
+         <attribute name="horizontalHeaderStretchLastSection">
+          <bool>false</bool>
+         </attribute>
+         <attribute name="verticalHeaderVisible">
+          <bool>false</bool>
+         </attribute>
+         <attribute name="verticalHeaderMinimumSectionSize">
+          <number>25</number>
+         </attribute>
+         <attribute name="verticalHeaderDefaultSectionSize">
+          <number>30</number>
+         </attribute>
+         <column>
+          <property name="text">
+           <string>ID</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>25</pointsize>
+           </font>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>key</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>25</pointsize>
+           </font>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>value</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>25</pointsize>
+           </font>
+          </property>
+         </column>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="stackedWidget_modelPage2">
+      <layout class="QGridLayout" name="gridLayout_6">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="QTableWidget" name="tableWidget_services">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QHeaderView::section{
+color: rgb(104, 112, 130);
+font-size:14px;
+background: transparent;
+background: rgb(246, 249, 255);
+padding: 1px;border: none;
+border-style:solid;
+border-right-width:0px;
+border-left-width:0px;
+}
+QTableWidget{
+color: rgb(104, 112, 130);
+font-size:14px;
+border-style:solid;
+border-width:1px;
+border-color:rgb(229, 231, 234);
+border-radius:4px;
+}</string>
+         </property>
+         <attribute name="horizontalHeaderMinimumSectionSize">
+          <number>25</number>
+         </attribute>
+         <attribute name="horizontalHeaderStretchLastSection">
+          <bool>false</bool>
+         </attribute>
+         <attribute name="verticalHeaderVisible">
+          <bool>false</bool>
+         </attribute>
+         <attribute name="verticalHeaderMinimumSectionSize">
+          <number>25</number>
+         </attribute>
+         <column>
+          <property name="text">
+           <string>ID</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>25</pointsize>
+           </font>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>key</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>25</pointsize>
+           </font>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>value</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>25</pointsize>
+           </font>
+          </property>
+         </column>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="stackedWidget_modelPage3">
+      <layout class="QGridLayout" name="gridLayout_4">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="QTableWidget" name="tableWidget_events">
+         <property name="styleSheet">
+          <string notr="true">QHeaderView::section{
+color: rgb(104, 112, 130);
+font-size:14px;
+background: transparent;
+background: rgb(246, 249, 255);
+padding: 1px;border: none;
+border-style:solid;
+border-right-width:0px;
+border-left-width:0px;
+}
+QTableWidget{
+color: rgb(104, 112, 130);
+font-size:14px;
+border-style:solid;
+border-width:1px;
+border-color:rgb(229, 231, 234);
+border-radius:4px;
+}</string>
+         </property>
+         <attribute name="horizontalHeaderMinimumSectionSize">
+          <number>25</number>
+         </attribute>
+         <attribute name="horizontalHeaderStretchLastSection">
+          <bool>false</bool>
+         </attribute>
+         <attribute name="verticalHeaderVisible">
+          <bool>false</bool>
+         </attribute>
+         <attribute name="verticalHeaderMinimumSectionSize">
+          <number>25</number>
+         </attribute>
+         <column>
+          <property name="text">
+           <string>ID</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>25</pointsize>
+           </font>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>key</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>25</pointsize>
+           </font>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>value</string>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>25</pointsize>
+           </font>
+          </property>
+         </column>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="label_4">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>36</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>36</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(54, 65, 89);</string>
+       </property>
+       <property name="text">
+        <string> 定时上报频率(ms)</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="minimumSize">
+        <size>
+         <width>12</width>
+         <height>36</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>12</width>
+         <height>36</height>
+        </size>
+       </property>
+       <property name="toolTip">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;最小上报间隔：1ms，最大为600s&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="toolTipDuration">
+        <number>6000000</number>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+	image: url(:/png/tips.png);
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_formatShow">
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QSpinBox" name="spinBox_timerMs">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>36</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>36</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QSpinBox{
+color: rgb(104, 112, 130);
+font-size:14px;
+border-style:solid;
+border-width:1px;
+border-color:rgb(229, 231, 234);
+border-radius:4px;
+padding-left:5px;
+}
+
+QSpinBox::up-button
+{
+image:url(:/png/up.png);
+width: 40px;
+}
+QSpinBox::down-button{
+image:url(:/png/down.png);
+width: 40px;
+}</string>
+     </property>
+     <property name="minimum">
+      <number>10</number>
+     </property>
+     <property name="maximum">
+      <number>86400000</number>
+     </property>
+     <property name="value">
+      <number>1000</number>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="checkBox_timer">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>36</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>36</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QCheckBox::indicator{
+    width: 30px;
+    height: 23px;
+}
+
+QCheckBox::indicator:unchecked{
+    image:url(:/png/checkBox0.png);
+}
+
+QCheckBox::indicator:checked{
+    image:url(:/png/checkBox1.png);
+}
+QCheckBox{background-color:transparent;color: rgb(104, 112, 130);}
+</string>
+     </property>
+     <property name="text">
+      <string>开启</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_11">
+     <item>
+      <widget class="QLabel" name="label_12">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>36</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>36</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(54, 65, 89);</string>
+       </property>
+       <property name="text">
+        <string>模式(Qos)</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_8">
+       <property name="minimumSize">
+        <size>
+         <width>12</width>
+         <height>36</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>12</width>
+         <height>36</height>
+        </size>
+       </property>
+       <property name="toolTip">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;QoS（Quality of Service）是服务质量的简称，提高服务质量就是保证传输的带宽，降低数据的丢包率以及延时抖动等。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="toolTipDuration">
+        <number>6000000</number>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+	image: url(:/png/tips.png);
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_7">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="1,0">
+     <item>
+      <widget class="QComboBox" name="comboBox_sendQos">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>36</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>36</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QComboBox{
+color: rgb(104, 112, 130);
+font-size:14px;
+border-style:solid;
+background-color: rgb(245, 245, 245);
+border-width:1px;
+border-color:rgb(229, 231, 234);
+border-radius:4px;
+padding-left:5px;
+}
+QComboBox::drop-down{
+border-style:none;
+width: 30px;
+}
+QComboBox::down-arrow {
+image: url(:/png/QComboBox_down.png);
+}
+QComboBox QAbstractItemView::item
+{ 
+	color: rgb(54, 65, 89);
+	height: 25px;  
+}</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>0</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>2</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>100</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>101</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>102</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_sendTtlv">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>36</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>36</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	color: rgb(47, 105, 235);
+	font-size:14px;
+	border-style:solid;
+	border-width:1px;
+	border-color:rgb(47, 105, 235);
+	border-radius:4px;
+	padding-left:15px;
+	padding-right:15px;
+}
+QPushButton:hover{
+	color: rgb(47, 105, 235);
+	background-color: rgba(47, 105, 235, 0.08);
+}
+QPushButton:pressed{
+	color: rgb(47, 105, 235);
+	background-color: rgba(47, 105, 235, 0.2);
+}</string>
+       </property>
+       <property name="text">
+        <string>发送数据</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_7">
+     <item>
+      <widget class="QLabel" name="label_13">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>36</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(54, 65, 89);</string>
+       </property>
+       <property name="text">
+        <string>pkgId</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_3">
+       <property name="minimumSize">
+        <size>
+         <width>12</width>
+         <height>36</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>12</width>
+         <height>36</height>
+        </size>
+       </property>
+       <property name="toolTip">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;用作于判断设备端上报数据时的是否有效送达的校验码。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="toolTipDuration">
+        <number>6000000</number>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+	image: url(:/png/tips.png);
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_3">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="1,0">
+     <item>
+      <widget class="QSpinBox" name="spinBox_sendPkgId">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>36</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QSpinBox{
+color: rgb(104, 112, 130);
+font-size:14px;
+border-style:solid;
+border-width:1px;
+border-color:rgb(229, 231, 234);
+border-radius:4px;
+padding-left:5px;
+}
+
+QSpinBox::up-button
+{
+image:url(:/png/up.png);
+width: 40px;
+}
+QSpinBox::down-button{
+image:url(:/png/down.png);
+width: 40px;
+}</string>
+       </property>
+       <property name="maximum">
+        <number>65535</number>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_sendAck">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>36</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	color: rgb(47, 105, 235);
+	font-size:14px;
+	border-style:solid;
+	border-width:1px;
+	border-color:rgb(47, 105, 235);
+	border-radius:4px;
+	padding-left:15px;
+	padding-right:15px;
+}
+QPushButton:hover{
+	color: rgb(47, 105, 235);
+	background-color: rgba(47, 105, 235, 0.08);
+}
+QPushButton:pressed{
+	color: rgb(47, 105, 235);
+	background-color: rgba(47, 105, 235, 0.2);
+}</string>
+       </property>
+       <property name="text">
+        <string>发送应答</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="checkBox_sendAckAuto">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>36</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QCheckBox::indicator{
+    width: 30px;
+    height: 23px;
+}
+
+QCheckBox::indicator:unchecked{
+    image:url(:/png/checkBox0.png);
+}
+
+QCheckBox::indicator:checked{
+    image:url(:/png/checkBox1.png);
+}
+QCheckBox{background-color:transparent;color: rgb(104, 112, 130);}
+</string>
+     </property>
+     <property name="text">
+      <string>自动应答</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_10">
+     <item>
+      <widget class="QLabel" name="label_9">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>36</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(54, 65, 89);</string>
+       </property>
+       <property name="text">
+        <string>读取字节数</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_7">
+       <property name="minimumSize">
+        <size>
+         <width>12</width>
+         <height>36</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>12</width>
+         <height>36</height>
+        </size>
+       </property>
+       <property name="toolTip">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;根据设置的读取字节数进行物模型数据读取，并把读取到的数据更新到物模型列表。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="toolTipDuration">
+        <number>6000000</number>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+	image: url(:/png/tips.png);
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_6">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QSpinBox" name="spinBox_modelReadLen">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>36</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QSpinBox{
+color: rgb(104, 112, 130);
+font-size:14px;
+border-style:solid;
+border-width:1px;
+border-color:rgb(229, 231, 234);
+border-radius:4px;
+padding-left:5px;
+}
+
+QSpinBox::up-button
+{
+image:url(:/png/up.png);
+width: 40px;
+}
+QSpinBox::down-button{
+image:url(:/png/down.png);
+width: 40px;
+}</string>
+     </property>
+     <property name="minimum">
+      <number>512</number>
+     </property>
+     <property name="maximum">
+      <number>10240</number>
+     </property>
+     <property name="value">
+      <number>512</number>
+     </property>
+     <property name="displayIntegerBase">
+      <number>10</number>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_6" stretch="1,1">
+     <item>
+      <widget class="QPushButton" name="pushButton_readTtlv">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>36</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	color: rgb(47, 105, 235);
+	font-size:14px;
+	border-style:solid;
+	border-width:1px;
+	border-color:rgb(47, 105, 235);
+	border-radius:4px;
+	padding-left:15px;
+	padding-right:15px;
+}
+QPushButton:hover{
+	color: rgb(47, 105, 235);
+	background-color: rgba(47, 105, 235, 0.08);
+}
+QPushButton:pressed{
+	color: rgb(47, 105, 235);
+	background-color: rgba(47, 105, 235, 0.2);
+}</string>
+       </property>
+       <property name="text">
+        <string>读取数据</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_readMaxTtlv">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>36</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>36</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	color: rgb(47, 105, 235);
+	font-size:14px;
+	border-style:solid;
+	border-width:1px;
+	border-color:rgb(47, 105, 235);
+	border-radius:4px;
+	padding-left:15px;
+	padding-right:15px;
+}
+QPushButton:hover{
+	color: rgb(47, 105, 235);
+	background-color: rgba(47, 105, 235, 0.08);
+}
+QPushButton:pressed{
+	color: rgb(47, 105, 235);
+	background-color: rgba(47, 105, 235, 0.2);
+}</string>
+       </property>
+       <property name="text">
+        <string>读取最大数据</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_8">
+     <item>
+      <widget class="QLabel" name="label_26">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>36</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>36</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(54, 65, 89);</string>
+       </property>
+       <property name="text">
+        <string>剩余字节数</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_5">
+       <property name="minimumSize">
+        <size>
+         <width>12</width>
+         <height>36</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>12</width>
+         <height>36</height>
+        </size>
+       </property>
+       <property name="toolTip">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;当前数据组剩下的字节数。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="toolTipDuration">
+        <number>6000000</number>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+	image: url(:/png/tips.png);
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_4">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_modelReadByte">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>36</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>36</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(104, 112, 130);
+font-size:14px;
+border-style:solid;
+border-width:1px;
+border-height：20px;
+border-color:rgb(229, 231, 234);
+border-radius:4px;
+padding-left:5px;
+</string>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_9">
+     <item>
+      <widget class="QLabel" name="label_28">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>36</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>36</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(54, 65, 89);</string>
+       </property>
+       <property name="text">
+        <string>剩余数据组数</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_6">
+       <property name="minimumSize">
+        <size>
+         <width>12</width>
+         <height>36</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>12</width>
+         <height>36</height>
+        </size>
+       </property>
+       <property name="toolTip">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;剩下的缓存数据组数。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="toolTipDuration">
+        <number>6000000</number>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+	image: url(:/png/tips.png);
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_5">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_modelReadCount">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>36</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>36</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(104, 112, 130);
+font-size:14px;
+border-style:solid;
+border-width:1px;
+border-height：20px;
+border-color:rgb(229, 231, 234);
+border-radius:4px;
+padding-left:5px;
+</string>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

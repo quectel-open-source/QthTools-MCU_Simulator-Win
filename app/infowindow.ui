@@ -1,0 +1,1169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>infoWindow</class>
+ <widget class="QWidget" name="infoWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1124</width>
+    <height>1130</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QScrollBar:vertical{ 
+    width:8px;  
+    border-style:flat;
+    border-radius: 4px;
+    border:0px;
+     background: rgb(255, 255, 255);
+} 
+QScrollBar::handle:vertical{ 
+    background: rgb(200, 200, 200);
+    border-radius: 4px;
+    width:8px; 
+    min-height:50px; 
+    border-style:flat;
+}
+QScrollBar::handle:vertical::hover{ 
+    background: rgb(130, 130, 130);
+    border-radius: 4px;
+    width:8px; 
+}
+QScrollBar::handle:vertical::pressed{ 
+    background: rgb(130, 130, 130);
+    border-radius:4px;
+    width:8px; 
+}
+QScrollBar::sub-page:vertical {
+     background: rgb(255, 255, 255);
+border-style:flat;
+}
+QScrollBar::add-page:vertical {
+     background: rgb(255, 255, 255);
+border-style:flat;
+}
+QScrollBar::add-line:vertical{
+     background: rgb(255, 255, 255);
+}
+QScrollBar::sub-line:vertical {
+     background: rgb(255, 255, 255);
+}
+QScrollBar:horizontal{ 
+    height:8px;  
+    border-style:flat;
+    border-radius: 4px;
+    border:0px;
+    background: rgb(255, 255, 255);
+} 
+QScrollBar::handle:horizontal{ 
+    background: rgb(200, 200, 200);
+    border-radius: 4px;
+    height:8px; 
+    min-width:50px; 
+    border-style:flat;
+}
+QScrollBar::handle:horizontal::hover{ 
+    background: rgb(130, 130, 130);
+    border-radius: 4px;
+    height:8px; 
+}
+QScrollBar::handle:horizontal::pressed{ 
+    background: rgb(130, 130, 130);
+    border-radius:4px;
+    height:8px; 
+}
+QScrollBar::sub-page:horizontal {
+     background: rgb(255, 255, 255);
+    border-style:flat;
+}
+QScrollBar::add-page:horizontal {
+     background: rgb(255, 255, 255);
+    border-style:flat;
+}
+QScrollBar::sub-line:horizontal {
+     background: rgb(255, 255, 255);
+}
+QScrollBar::add-line:horizontal{
+     background: rgb(255, 255, 255);
+}
+QToolTip{
+	min-width: 250px;
+	padding: 3px;
+	font-size:14px;
+	border-style:solid;
+	border-width:1px;	
+	border-color:rgb(229, 231, 234);
+	border-radius:4px;
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_4">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QWidget" name="widget_moduleInfo" native="true">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);
+border-radius:8px;</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <property name="spacing">
+       <number>10</number>
+      </property>
+      <property name="leftMargin">
+       <number>15</number>
+      </property>
+      <property name="topMargin">
+       <number>10</number>
+      </property>
+      <property name="rightMargin">
+       <number>15</number>
+      </property>
+      <property name="bottomMargin">
+       <number>10</number>
+      </property>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <property name="spacing">
+         <number>10</number>
+        </property>
+        <item>
+         <widget class="Line" name="line">
+          <property name="minimumSize">
+           <size>
+            <width>3</width>
+            <height>16</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>3</width>
+            <height>16</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(47, 105, 235);</string>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(14, 25, 50);
+font-size:14px;
+</string>
+          </property>
+          <property name="text">
+           <string>模组信息</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_infoGet">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>36</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton:hover{
+	color: rgb(47, 105, 235);
+	font-size:14px;
+	border-style:solid;
+	border-width:1px;
+	border-color:rgb(47, 105, 235);
+	border-radius:4px;
+	padding-left:15px;
+	padding-right:15px;
+	background-color: rgba(47, 105, 235, 0.08);
+}
+QPushButton {
+	color: rgb(47, 105, 235);
+	font-size:14px;
+	border-style:solid;
+	border-width:1px;
+	border-color:rgb(47, 105, 235);
+	border-radius:4px;
+	padding-left:15px;
+	padding-right:15px;
+}
+QPushButton:pressed{
+	color: rgb(47, 105, 235);
+	font-size:14px;
+	border-style:solid;
+	border-width:1px;
+	border-color:rgb(47, 105, 235);
+	border-radius:4px;
+	padding-left:15px;
+	padding-right:15px;
+	background-color: rgba(47, 105, 235, 0.2);
+}</string>
+          </property>
+          <property name="text">
+           <string>获取信息</string>
+          </property>
+          <property name="checkable">
+           <bool>false</bool>
+          </property>
+          <property name="checked">
+           <bool>false</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_infoReport">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>36</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton:hover{
+	color: rgb(47, 105, 235);
+	font-size:14px;
+	border-style:solid;
+	border-width:1px;
+	border-color:rgb(47, 105, 235);
+	border-radius:4px;
+	padding-left:15px;
+	padding-right:15px;
+	background-color: rgba(47, 105, 235, 0.08);
+}
+QPushButton {
+	color: rgb(47, 105, 235);
+	font-size:14px;
+	border-style:solid;
+	border-width:1px;
+	border-color:rgb(47, 105, 235);
+	border-radius:4px;
+	padding-left:15px;
+	padding-right:15px;
+}
+QPushButton:pressed{
+	color: rgb(47, 105, 235);
+	font-size:14px;
+	border-style:solid;
+	border-width:1px;
+	border-color:rgb(47, 105, 235);
+	border-radius:4px;
+	padding-left:15px;
+	padding-right:15px;
+	background-color: rgba(47, 105, 235, 0.2);
+}</string>
+          </property>
+          <property name="text">
+           <string>上报平台</string>
+          </property>
+          <property name="checkable">
+           <bool>false</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QTableWidget" name="tableWidget_info">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QHeaderView::section{
+color: rgb(104, 112, 130);
+font-size:14px;
+background: transparent;
+background: rgb(246, 249, 255);
+padding: 1px;border: none;
+border-style:solid;
+border-right-width:0px;
+border-left-width:0px;
+}
+QTableWidget{
+color: rgb(104, 112, 130);
+font-size:14px;
+border-style:solid;
+border-width:1px;
+border-color:rgb(229, 231, 234);
+border-radius:4px;
+padding:2px; 
+}</string>
+        </property>
+        <property name="editTriggers">
+         <set>QAbstractItemView::NoEditTriggers</set>
+        </property>
+        <attribute name="horizontalHeaderStretchLastSection">
+         <bool>true</bool>
+        </attribute>
+        <column>
+         <property name="text">
+          <string>键</string>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>25</pointsize>
+          </font>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>值</string>
+         </property>
+        </column>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" name="widget_location" native="true">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);
+border-radius:8px;</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <property name="spacing">
+       <number>10</number>
+      </property>
+      <property name="leftMargin">
+       <number>15</number>
+      </property>
+      <property name="topMargin">
+       <number>10</number>
+      </property>
+      <property name="rightMargin">
+       <number>15</number>
+      </property>
+      <property name="bottomMargin">
+       <number>10</number>
+      </property>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_5">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QPushButton" name="pushButton_locationInfo">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>36</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>36</height>
+           </size>
+          </property>
+          <property name="toolTip">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;模组已包含内置定位功能的定位方式，直接调用相关AT命令即可获取及上报。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="toolTipDuration">
+           <number>6000000</number>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">#pushButton_locationInfo{
+font-size:16px;
+font-weight:bold;
+padding-left:15px;
+padding-right:15px;
+}
+QPushButton:pressed{
+color: rgb(0, 0, 0);
+font-size:16px;
+border-radius:0px;
+}
+QPushButton:checked
+{
+color: rgb(47, 105, 235);
+font-weight:bold;
+font-size:16px;
+border-radius:0px;
+border-bottom-style:solid;
+border-bottom-width:2px;
+}</string>
+          </property>
+          <property name="text">
+           <string>内置定位信息</string>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_locationInfoExc">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>36</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>36</height>
+           </size>
+          </property>
+          <property name="toolTip">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;模组外部定位功能的定位方式，定位信息由模组直接传参入AT命令中。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="toolTipDuration">
+           <number>6000000</number>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">#pushButton_locationInfoExc{
+font-size:16px;
+font-weight:bold;
+padding-left:15px;
+padding-right:15px;
+}
+QPushButton:pressed{
+color: rgb(0, 0, 0);
+font-size:16px;
+border-radius:0px;
+}
+QPushButton:checked
+{
+color: rgb(47, 105, 235);
+font-weight:bold;
+font-size:16px;
+border-radius:0px;
+border-bottom-style:solid;
+border-bottom-width:2px;
+}</string>
+          </property>
+          <property name="text">
+           <string>外置定位信息</string>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>13</width>
+            <height>17</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QStackedWidget" name="tabWidget_gpsInfo">
+        <property name="focusPolicy">
+         <enum>Qt::StrongFocus</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QHeaderView::section{
+color: rgb(104, 112, 130);
+font-size:14px;
+background: transparent;
+background: rgb(246, 249, 255);
+padding: 1px;border: none;
+border-style:solid;
+border-right-width:0px;
+border-left-width:0px;
+}
+QTableWidget{
+color: rgb(104, 112, 130);
+font-size:14px;
+border-style:solid;
+border-width:1px;
+border-color:rgb(229, 231, 234);
+border-radius:4px;
+padding:2px; 
+}</string>
+        </property>
+        <property name="currentIndex">
+         <number>1</number>
+        </property>
+        <widget class="QWidget" name="stackedWidget_gpsInfoPage1">
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <property name="spacing">
+           <number>6</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QTableWidget" name="tableWidget_locationInfo_get">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::StrongFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QHeaderView::section{
+color: rgb(104, 112, 130);
+font-size:14px;
+background: transparent;
+background: rgb(246, 249, 255);
+padding: 1px;border: none;
+border-style:solid;
+border-right-width:0px;
+border-left-width:0px;
+}
+QTableWidget{
+color: rgb(104, 112, 130);
+font-size:14px;
+border-style:solid;
+border-width:1px;
+border-color:rgb(229, 231, 234);
+border-radius:4px;
+padding:2px; 
+}</string>
+            </property>
+            <property name="editTriggers">
+             <set>QAbstractItemView::NoEditTriggers</set>
+            </property>
+            <attribute name="horizontalHeaderStretchLastSection">
+             <bool>true</bool>
+            </attribute>
+            <column>
+             <property name="text">
+              <string>类型</string>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>25</pointsize>
+              </font>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>数据</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+          <item>
+           <widget class="QWidget" name="widget_3" native="true">
+            <layout class="QHBoxLayout" name="horizontalLayout">
+             <property name="spacing">
+              <number>10</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <spacer name="horizontalSpacer_4">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_reportInsideLbs">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>36</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>36</height>
+                </size>
+               </property>
+               <property name="toolTip">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;点击类型中的项，再点击此按钮完成上报&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton:hover{
+	color: rgb(47, 105, 235);
+	font-size:14px;
+	border-style:solid;
+	border-width:1px;
+	border-color:rgb(47, 105, 235);
+	border-radius:4px;
+	padding-left:15px;
+	padding-right:15px;
+	background-color: rgba(47, 105, 235, 0.08);
+}
+QPushButton {
+	color: rgb(47, 105, 235);
+	font-size:14px;
+	border-style:solid;
+	border-width:1px;
+	border-color:rgb(47, 105, 235);
+	border-radius:4px;
+	padding-left:15px;
+	padding-right:15px;
+}
+QPushButton:pressed{
+	color: rgb(47, 105, 235);
+	font-size:14px;
+	border-style:solid;
+	border-width:1px;
+	border-color:rgb(47, 105, 235);
+	border-radius:4px;
+	padding-left:15px;
+	padding-right:15px;
+	background-color: rgba(47, 105, 235, 0.2);
+}</string>
+               </property>
+               <property name="text">
+                <string>上报定位数据</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_configSet">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>36</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>36</height>
+                </size>
+               </property>
+               <property name="toolTip">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;点击类型中的项，再点击获取模块内置的定位数据，则数据列将显示相应信息&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton:hover{
+	color: rgb(47, 105, 235);
+	font-size:14px;
+	border-style:solid;
+	border-width:1px;
+	border-color:rgb(47, 105, 235);
+	border-radius:4px;
+	padding-left:15px;
+	padding-right:15px;
+	background-color: rgba(47, 105, 235, 0.08);
+}
+QPushButton {
+	color: rgb(47, 105, 235);
+	font-size:14px;
+	border-style:solid;
+	border-width:1px;
+	border-color:rgb(47, 105, 235);
+	border-radius:4px;
+	padding-left:15px;
+	padding-right:15px;
+}
+QPushButton:pressed{
+	color: rgb(47, 105, 235);
+	font-size:14px;
+	border-style:solid;
+	border-width:1px;
+	border-color:rgb(47, 105, 235);
+	border-radius:4px;
+	padding-left:15px;
+	padding-right:15px;
+	background-color: rgba(47, 105, 235, 0.2);
+}</string>
+               </property>
+               <property name="text">
+                <string>获取定位数据</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_configGet">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>36</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>36</height>
+                </size>
+               </property>
+               <property name="toolTip">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;获取内置定位信息栏将显示可支持的定位类型&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton:hover{
+	color: rgb(47, 105, 235);
+	font-size:14px;
+	border-style:solid;
+	border-width:1px;
+	border-color:rgb(47, 105, 235);
+	border-radius:4px;
+	padding-left:15px;
+	padding-right:15px;
+	background-color: rgba(47, 105, 235, 0.08);
+}
+QPushButton {
+	color: rgb(47, 105, 235);
+	font-size:14px;
+	border-style:solid;
+	border-width:1px;
+	border-color:rgb(47, 105, 235);
+	border-radius:4px;
+	padding-left:15px;
+	padding-right:15px;
+}
+QPushButton:pressed{
+	color: rgb(47, 105, 235);
+	font-size:14px;
+	border-style:solid;
+	border-width:1px;
+	border-color:rgb(47, 105, 235);
+	border-radius:4px;
+	padding-left:15px;
+	padding-right:15px;
+	background-color: rgba(47, 105, 235, 0.2);
+}</string>
+               </property>
+               <property name="text">
+                <string>查询定位类型</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_configTest">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>36</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>36</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton:hover{
+	color: rgb(47, 105, 235);
+	font-size:14px;
+	border-style:solid;
+	border-width:1px;
+	border-color:rgb(47, 105, 235);
+	border-radius:4px;
+	padding-left:15px;
+	padding-right:15px;
+	background-color: rgba(47, 105, 235, 0.08);
+}
+QPushButton {
+	color: rgb(47, 105, 235);
+	font-size:14px;
+	border-style:solid;
+	border-width:1px;
+	border-color:rgb(47, 105, 235);
+	border-radius:4px;
+	padding-left:15px;
+	padding-right:15px;
+}
+QPushButton:pressed{
+	color: rgb(47, 105, 235);
+	font-size:14px;
+	border-style:solid;
+	border-width:1px;
+	border-color:rgb(47, 105, 235);
+	border-radius:4px;
+	padding-left:15px;
+	padding-right:15px;
+	background-color: rgba(47, 105, 235, 0.2);
+}</string>
+               </property>
+               <property name="text">
+                <string>测试定位指令</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="stackedWidget_gpsInfoPage2">
+         <layout class="QGridLayout" name="gridLayout_4">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QTableWidget" name="tableWidget_locationInfoExc_get">
+            <property name="styleSheet">
+             <string notr="true">QHeaderView::section{
+color: rgb(104, 112, 130);
+font-size:14px;
+background: transparent;
+background: rgb(246, 249, 255);
+padding: 1px;border: none;
+border-style:solid;
+border-right-width:0px;
+border-left-width:0px;
+}
+QTableWidget{
+color: rgb(104, 112, 130);
+font-size:14px;
+border-style:solid;
+border-width:1px;
+border-color:rgb(229, 231, 234);
+border-radius:4px;
+padding:2px; 
+}</string>
+            </property>
+            <attribute name="horizontalHeaderDefaultSectionSize">
+             <number>100</number>
+            </attribute>
+            <attribute name="horizontalHeaderStretchLastSection">
+             <bool>true</bool>
+            </attribute>
+            <column>
+             <property name="text">
+              <string>类型</string>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>25</pointsize>
+              </font>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>数据</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QWidget" name="widget_4" native="true">
+            <layout class="QHBoxLayout" name="horizontalLayout_2">
+             <property name="spacing">
+              <number>10</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QPushButton" name="pushButton_outlayGPSAdd">
+               <property name="minimumSize">
+                <size>
+                 <width>60</width>
+                 <height>36</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>36</height>
+                </size>
+               </property>
+               <property name="toolTip">
+                <string>添加外置定位数据</string>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+	color: rgba(104, 112, 130, 1);
+	font-size:14px;
+	border-style:solid;
+	border-width:1px;
+	border-color:rgba(229, 231, 234, 1);
+	border-radius:4px;
+	padding-left:15px;
+	padding-right:15px;
+}
+QPushButton:hover{
+	color: rgba(104, 112, 130, 1);
+	background-color: rgba(229, 231, 234, 0.4);
+}
+QPushButton:pressed{
+	color: rgba(104, 112, 130, 1);
+	background-color: rgba(229, 231, 234, 0.4);
+}</string>
+               </property>
+               <property name="text">
+                <string>+</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_outlayGPSDelete">
+               <property name="minimumSize">
+                <size>
+                 <width>60</width>
+                 <height>36</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>36</height>
+                </size>
+               </property>
+               <property name="toolTip">
+                <string>删除外置定位数据</string>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+	color: rgba(104, 112, 130, 1);
+	font-size:14px;
+	border-style:solid;
+	border-width:1px;
+	border-color:rgba(229, 231, 234, 1);
+	border-radius:4px;
+	padding-left:15px;
+	padding-right:15px;
+}
+QPushButton:hover{
+	color: rgba(104, 112, 130, 1);
+	background-color: rgba(229, 231, 234, 0.4);
+}
+QPushButton:pressed{
+	color: rgba(104, 112, 130, 1);
+	background-color: rgba(229, 231, 234, 0.4);
+}</string>
+               </property>
+               <property name="text">
+                <string>-</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_3">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_outlayGPSSet">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>36</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>36</height>
+                </size>
+               </property>
+               <property name="toolTip">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;点击“类型”，设置模块外置的定位类型，再将信息发送给开发者中心，该功能的实现前提为设备已连接至开发者中心。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton:hover{
+	color: rgb(47, 105, 235);
+	font-size:14px;
+	border-style:solid;
+	border-width:1px;
+	border-color:rgb(47, 105, 235);
+	border-radius:4px;
+	padding-left:15px;
+	padding-right:15px;
+	background-color: rgba(47, 105, 235, 0.08);
+}
+QPushButton {
+	color: rgb(47, 105, 235);
+	font-size:14px;
+	border-style:solid;
+	border-width:1px;
+	border-color:rgb(47, 105, 235);
+	border-radius:4px;
+	padding-left:15px;
+	padding-right:15px;
+}
+QPushButton:pressed{
+	color: rgb(47, 105, 235);
+	font-size:14px;
+	border-style:solid;
+	border-width:1px;
+	border-color:rgb(47, 105, 235);
+	border-radius:4px;
+	padding-left:15px;
+	padding-right:15px;
+	background-color: rgba(47, 105, 235, 0.2);
+}</string>
+               </property>
+               <property name="text">
+                <string>上报定位类型</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_outlayGPSTest">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>36</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>36</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton:hover{
+	color: rgb(47, 105, 235);
+	font-size:14px;
+	border-style:solid;
+	border-width:1px;
+	border-color:rgb(47, 105, 235);
+	border-radius:4px;
+	padding-left:15px;
+	padding-right:15px;
+	background-color: rgba(47, 105, 235, 0.08);
+}
+QPushButton {
+	color: rgb(47, 105, 235);
+	font-size:14px;
+	border-style:solid;
+	border-width:1px;
+	border-color:rgb(47, 105, 235);
+	border-radius:4px;
+	padding-left:15px;
+	padding-right:15px;
+}
+QPushButton:pressed{
+	color: rgb(47, 105, 235);
+	font-size:14px;
+	border-style:solid;
+	border-width:1px;
+	border-color:rgb(47, 105, 235);
+	border-radius:4px;
+	padding-left:15px;
+	padding-right:15px;
+	background-color: rgba(47, 105, 235, 0.2);
+}</string>
+               </property>
+               <property name="text">
+                <string>测试定位指令</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

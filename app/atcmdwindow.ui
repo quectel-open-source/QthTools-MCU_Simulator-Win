@@ -1,0 +1,2075 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ATcmdWindow</class>
+ <widget class="QWidget" name="ATcmdWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>361</width>
+    <height>578</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QPushButton {
+	color: rgb(47, 105, 235);
+	font-size:14px;
+	border-style:solid;
+	border-width:1px;
+	border-color:rgb(47, 105, 235);
+	border-radius:4px;
+	padding-left:15px;
+	padding-right:15px;
+}
+QPushButton:hover{
+	color: rgb(47, 105, 235);
+	background-color: rgba(47, 105, 235, 0.08);
+}
+QPushButton:pressed{
+	color: rgb(47, 105, 235);
+	background-color: rgba(47, 105, 235, 0.2);
+}
+
+QComboBox{
+color: rgb(104, 112, 130);
+font-size:14px;
+border-style:solid;
+background-color: rgb(245, 245, 245);
+border-width:1px;
+border-color:rgb(229, 231, 234);
+border-radius:4px;
+padding-left:5px;
+}
+QComboBox:disabled
+{
+color: rgb(180, 180, 180);
+font-size:14px;
+border-style:solid;
+background-color: rgb(220, 220, 220);
+border-width:1px;
+border-color:rgb(229, 231, 234);
+border-radius:4px;
+padding-left:5px;
+}
+QComboBox::drop-down{
+border-style:none;
+width: 30px;
+}
+QComboBox::down-arrow {
+image: url(:/png/QComboBox_down.png);
+}
+
+QComboBox QAbstractItemView::item
+{ 
+	color: rgb(54, 65, 89);
+	height: 25px;  
+}
+QToolTip{
+	min-width: 250px;
+	padding: 3px;
+	font-size:14px;
+	border-style:solid;
+	border-width:1px;	
+	border-color:rgb(229, 231, 234);
+	border-radius:4px;
+}</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item row="0" column="0">
+    <widget class="QScrollArea" name="scrollArea">
+     <property name="styleSheet">
+      <string notr="true">QScrollBar:vertical{ 
+    width:8px;  
+    border-style:flat;
+    border-radius: 4px;
+    border:0px;
+     background: rgb(255, 255, 255);
+} 
+QScrollBar::handle:vertical{ 
+    background: rgb(200, 200, 200);
+    border-radius: 4px;
+    width:8px; 
+    min-height:50px; 
+    border-style:flat;
+}
+QScrollBar::handle:vertical::hover{ 
+    background: rgb(130, 130, 130);
+    border-radius: 4px;
+    width:8px; 
+}
+QScrollBar::handle:vertical::pressed{ 
+    background: rgb(130, 130, 130);
+    border-radius:4px;
+    width:8px; 
+}
+QScrollBar::sub-page:vertical {
+     background: rgb(255, 255, 255);
+border-style:flat;
+}
+QScrollBar::add-page:vertical {
+     background: rgb(255, 255, 255);
+border-style:flat;
+}
+QScrollBar::add-line:vertical{
+     background: rgb(255, 255, 255);
+}
+QScrollBar::sub-line:vertical {
+     background: rgb(255, 255, 255);
+}
+QScrollBar:horizontal{ 
+    height:8px;  
+    border-style:flat;
+    border-radius: 4px;
+    border:0px;
+    background: rgb(255, 255, 255);
+} 
+QScrollBar::handle:horizontal{ 
+    background: rgb(200, 200, 200);
+    border-radius: 4px;
+    height:8px; 
+    min-width:50px; 
+    border-style:flat;
+}
+QScrollBar::handle:horizontal::hover{ 
+    background: rgb(130, 130, 130);
+    border-radius: 4px;
+    height:8px; 
+}
+QScrollBar::handle:horizontal::pressed{ 
+    background: rgb(130, 130, 130);
+    border-radius:4px;
+    height:8px; 
+}
+QScrollBar::sub-page:horizontal {
+     background: rgb(255, 255, 255);
+    border-style:flat;
+}
+QScrollBar::add-page:horizontal {
+     background: rgb(255, 255, 255);
+    border-style:flat;
+}
+QScrollBar::sub-line:horizontal {
+     background: rgb(255, 255, 255);
+}
+QScrollBar::add-line:horizontal{
+     background: rgb(255, 255, 255);
+}</string>
+     </property>
+     <property name="widgetResizable">
+      <bool>true</bool>
+     </property>
+     <widget class="QWidget" name="scrollAreaWidgetContents_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>345</width>
+        <height>1168</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>36</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>36</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-size:14px;
+color:rgb(14, 25, 50);
+font-weight:bold;</string>
+         </property>
+         <property name="text">
+          <string>设备信息配置</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_11">
+         <item>
+          <widget class="QLabel" name="label_3">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(54, 65, 89);</string>
+           </property>
+           <property name="text">
+            <string>服务器</string>
+           </property>
+           <property name="scaledContents">
+            <bool>false</bool>
+           </property>
+           <property name="margin">
+            <number>1</number>
+           </property>
+           <property name="indent">
+            <number>0</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_2">
+           <property name="minimumSize">
+            <size>
+             <width>12</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>12</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="toolTip">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;用于配置协议类型与服务器地址。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+           <property name="toolTipDuration">
+            <number>6000000</number>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLabel{
+	image: url(:/png/tips.png);
+}
+</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QComboBox" name="comboBox_protocol">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <horstretch>5</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>36</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>36</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QComboBox{
+color: rgb(104, 112, 130);
+font-size:14px;
+border-style:solid;
+background-color: rgb(245, 245, 245);
+border-width:1px;
+border-color:rgb(229, 231, 234);
+border-radius:4px;
+padding-left:5px;
+}
+QComboBox:disabled
+{
+color: rgb(180, 180, 180);
+font-size:14px;
+border-style:solid;
+background-color: rgb(220, 220, 220);
+border-width:1px;
+border-color:rgb(229, 231, 234);
+border-radius:4px;
+padding-left:5px;
+}
+QComboBox::drop-down{
+border-style:none;
+width: 30px;
+}
+QComboBox::down-arrow {
+image: url(:/png/QComboBox_down.png);
+}
+
+QComboBox QAbstractItemView::item
+{ 
+	color: rgb(54, 65, 89);
+	height: 25px;  
+}</string>
+         </property>
+         <property name="currentIndex">
+          <number>1</number>
+         </property>
+         <item>
+          <property name="text">
+           <string>LwM2M协议</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>MQTT协议</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="comboBox_server">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <horstretch>5</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>36</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>36</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QComboBox{
+color: rgb(104, 112, 130);
+font-size:14px;
+border-style:solid;
+background-color: rgb(245, 245, 245);
+border-width:1px;
+border-color:rgb(229, 231, 234);
+border-radius:4px;
+padding-left:5px;
+}
+QComboBox:disabled
+{
+color: rgb(180, 180, 180);
+font-size:14px;
+border-style:solid;
+background-color: rgb(220, 220, 220);
+border-width:1px;
+border-color:rgb(229, 231, 234);
+border-radius:4px;
+padding-left:5px;
+}
+QComboBox::drop-down{
+border-style:none;
+width: 30px;
+}
+QComboBox::down-arrow {
+image: url(:/png/QComboBox_down.png);
+}
+
+QComboBox QAbstractItemView::item
+{ 
+	color: rgb(54, 65, 89);
+	height: 25px;  
+}</string>
+         </property>
+         <property name="editable">
+          <bool>false</bool>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <item>
+          <property name="text">
+           <string>生产环境(http)</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>生产环境(mqtt)</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>生产环境(coap)</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>自定义</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QPushButton" name="pushButton_server">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string>设置</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_server_get">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string>获取</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_12">
+         <item>
+          <widget class="QLabel" name="label_4">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(54, 65, 89);</string>
+           </property>
+           <property name="text">
+            <string>缓存模式</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_5">
+           <property name="minimumSize">
+            <size>
+             <width>12</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>12</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="toolTip">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;关闭缓存模式：云端下行透传数据模组会将数据主动打印到串口。&lt;br/&gt;开启缓存模式：云端下行透传数据模组不会主动将数据主动打印到串口，需MCU自行向模组发送AT命令进行打印。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+           <property name="toolTipDuration">
+            <number>6000000</number>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLabel{
+	image: url(:/png/tips.png);
+}
+</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1,0,0">
+         <item>
+          <widget class="QComboBox" name="comboBox_buffer">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>10</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <item>
+            <property name="text">
+             <string>关闭缓存模式</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>开启缓存模式</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_buffer">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string>设置</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_buffer_get">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string>获取</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_13">
+         <item>
+          <widget class="QLabel" name="label_6">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(54, 65, 89);</string>
+           </property>
+           <property name="text">
+            <string>心跳时长</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_10">
+           <property name="minimumSize">
+            <size>
+             <width>12</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>12</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="toolTip">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;心跳时长：设备生命周期。移动/联通运营商范围：1~864000；电信运营商范围：300~86400；默认值：86400；单位：秒。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+           <property name="toolTipDuration">
+            <number>6000000</number>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLabel{
+	image: url(:/png/tips.png);
+}
+</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_3">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="1,0,0">
+         <item>
+          <widget class="QSpinBox" name="spinBox_lifetime">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+             <horstretch>10</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QSpinBox{
+color: rgb(104, 112, 130);
+font-size:14px;
+border-style:solid;
+border-width:1px;
+border-color:rgb(229, 231, 234);
+border-radius:4px;
+padding-left:5px;
+}
+
+QSpinBox::up-button
+{
+image:url(:/png/up.png);
+width: 40px;
+}
+QSpinBox::down-button{
+image:url(:/png/down.png);
+width: 40px;
+}</string>
+           </property>
+           <property name="minimum">
+            <number>1</number>
+           </property>
+           <property name="maximum">
+            <number>864000</number>
+           </property>
+           <property name="value">
+            <number>120</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_lifetime">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string>设置</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_lifetime_get">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string>获取</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_14">
+         <item>
+          <widget class="QLabel" name="label_7">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(54, 65, 89);
+</string>
+           </property>
+           <property name="text">
+            <string>contextId</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_12">
+           <property name="minimumSize">
+            <size>
+             <width>12</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>12</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="toolTip">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;contextID是当模组除了使用上云功能以外，还需要使用模组进行其他传输业务时才需要设置的，若无特殊需求则不需要进行配置，默认关闭。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+           <property name="toolTipDuration">
+            <number>6000000</number>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLabel{
+	image: url(:/png/tips.png);
+}
+</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_4">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="1,0,0">
+         <item>
+          <widget class="QSpinBox" name="spinBox_contextId">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+             <horstretch>10</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QSpinBox{
+color: rgb(104, 112, 130);
+font-size:14px;
+border-style:solid;
+border-width:1px;
+border-color:rgb(229, 231, 234);
+border-radius:4px;
+padding-left:5px;
+}
+
+QSpinBox::up-button
+{
+image:url(:/png/up.png);
+width: 40px;
+}
+QSpinBox::down-button{
+image:url(:/png/down.png);
+width: 40px;
+}</string>
+           </property>
+           <property name="minimum">
+            <number>1</number>
+           </property>
+           <property name="value">
+            <number>1</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_contextId">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string>设置</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_contextId_get">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string>获取</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_15">
+         <item>
+          <widget class="QLabel" name="label_8">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(54, 65, 89);</string>
+           </property>
+           <property name="text">
+            <string>物模型数据格式</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_13">
+           <property name="minimumSize">
+            <size>
+             <width>12</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>12</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="toolTip">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;TTLV：TTLV（即Tag，Type，Length，Value）是一种按照协议规定处理后的16进制数据格式。&lt;br/&gt;JSON： 基于 JavaScript的一个子集，是一种开放的、轻量级的数据格式。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+           <property name="toolTipDuration">
+            <number>6000000</number>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLabel{
+	image: url(:/png/tips.png);
+}
+</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_5">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_5" stretch="1,0,0">
+         <item>
+          <widget class="QComboBox" name="comboBox_format">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>10</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QComboBox{
+color: rgb(104, 112, 130);
+font-size:14px;
+border-style:solid;
+background-color: rgb(245, 245, 245);
+border-width:1px;
+border-color:rgb(229, 231, 234);
+border-radius:4px;
+padding-left:5px;
+}
+QComboBox:disabled
+{
+color: rgb(180, 180, 180);
+font-size:14px;
+border-style:solid;
+background-color: rgb(220, 220, 220);
+border-width:1px;
+border-color:rgb(229, 231, 234);
+border-radius:4px;
+padding-left:5px;
+}
+QComboBox::drop-down{
+border-style:none;
+width: 30px;
+}
+QComboBox::down-arrow {
+image: url(:/png/QComboBox_down.png);
+}
+
+QComboBox QAbstractItemView::item
+{ 
+	color: rgb(54, 65, 89);
+	height: 25px;  
+}</string>
+           </property>
+           <property name="currentIndex">
+            <number>0</number>
+           </property>
+           <item>
+            <property name="text">
+             <string>TTLV</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>JSON</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_format">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string>设置</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_format_get">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string>获取</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_16">
+         <item>
+          <widget class="QLabel" name="label_9">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(54, 65, 89);</string>
+           </property>
+           <property name="text">
+            <string>加密模式</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_14">
+           <property name="minimumSize">
+            <size>
+             <width>12</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>12</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="toolTip">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;数据链路的一种加密模式，可根据实际需求进行选择，默认关闭。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+           <property name="toolTipDuration">
+            <number>6000000</number>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLabel{
+	image: url(:/png/tips.png);
+}
+</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_6">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_6" stretch="1,0,0">
+         <item>
+          <widget class="QComboBox" name="comboBox_sessionMode">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>10</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <item>
+            <property name="text">
+             <string>关闭加密模式</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>开启加密模式</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_sessionMode">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string>设置</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_sessionMode_get">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(47, 105, 235);
+font-size:14px;
+border-style:solid;
+border-width:1px;
+border-color:rgb(47, 105, 235);
+border-radius:4px;
+padding-left:15px;
+padding-right:15px;</string>
+           </property>
+           <property name="text">
+            <string>获取</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_17">
+         <item>
+          <widget class="QLabel" name="label_dkds">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(54, 65, 89);</string>
+           </property>
+           <property name="text">
+            <string>设备DK,DS</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_15">
+           <property name="minimumSize">
+            <size>
+             <width>12</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>12</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="toolTip">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DeviceKey 一般不需要特别设置，模组默认使用IMEI（蜂窝模组）或者MAC地址（Wi-Fi模组）作为DeviceKey。DeviceSecret也不需要配置，模组第一次连接平台时，平台会生成DeviceSecret并下发给模组（此步骤用户无感知）&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+           <property name="toolTipDuration">
+            <number>6000000</number>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLabel{
+	image: url(:/png/tips.png);
+}
+</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_7">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_dk">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>36</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>36</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(104, 112, 130);
+font-size:14px;
+border-style:solid;
+border-width:1px;
+border-height：20px;
+border-color:rgb(229, 231, 234);
+border-radius:4px;
+padding-left:5px;
+</string>
+         </property>
+         <property name="inputMask">
+          <string/>
+         </property>
+         <property name="placeholderText">
+          <string>设备号</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_ds">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>36</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>36</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(104, 112, 130);
+font-size:14px;
+border-style:solid;
+border-width:1px;
+border-height：20px;
+border-color:rgb(229, 231, 234);
+border-radius:4px;
+padding-left:5px;
+</string>
+         </property>
+         <property name="placeholderText">
+          <string>设备密钥</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_7">
+         <item>
+          <widget class="QPushButton" name="pushButton_dkds">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(47, 105, 235);
+font-size:14px;
+border-style:solid;
+border-width:1px;
+border-color:rgb(47, 105, 235);
+border-radius:4px;
+padding-left:15px;
+padding-right:15px;</string>
+           </property>
+           <property name="text">
+            <string>设置</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_dkds_get">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(47, 105, 235);
+font-size:14px;
+border-style:solid;
+border-width:1px;
+border-color:rgb(47, 105, 235);
+border-radius:4px;
+padding-left:15px;
+padding-right:15px;</string>
+           </property>
+           <property name="text">
+            <string>获取</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_18">
+         <item>
+          <widget class="QLabel" name="label_psk">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(54, 65, 89);</string>
+           </property>
+           <property name="text">
+            <string>PSK</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_16">
+           <property name="minimumSize">
+            <size>
+             <width>12</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>12</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="toolTip">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;预共享密钥，相当于密码，必须唯一。若不填写, 则会根据DeviceKey自动生成。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+           <property name="toolTipDuration">
+            <number>6000000</number>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLabel{
+	image: url(:/png/tips.png);
+}
+</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_8">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_8">
+         <item>
+          <widget class="QLineEdit" name="lineEdit_psk">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(104, 112, 130);
+font-size:14px;
+border-style:solid;
+border-width:1px;
+border-height：20px;
+border-color:rgb(229, 231, 234);
+border-radius:25px;
+padding-left:5px;
+</string>
+           </property>
+           <property name="placeholderText">
+            <string>预共享秘钥</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_psk">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(47, 105, 235);
+font-size:14px;
+border-style:solid;
+border-width:1px;
+border-color:rgb(47, 105, 235);
+border-radius:4px;
+padding-left:15px;
+padding-right:15px;</string>
+           </property>
+           <property name="text">
+            <string>设置</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_psk_get">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(47, 105, 235);
+font-size:14px;
+border-style:solid;
+border-width:1px;
+border-color:rgb(47, 105, 235);
+border-radius:4px;
+padding-left:15px;
+padding-right:15px;</string>
+           </property>
+           <property name="text">
+            <string>获取</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_19">
+         <item>
+          <widget class="QLabel" name="label_txidMode">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(54, 65, 89);</string>
+           </property>
+           <property name="text">
+            <string>txidMode</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_17">
+           <property name="minimumSize">
+            <size>
+             <width>12</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>12</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="toolTip">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;设置开启后，当设备发送上行物模型数据给平台时，会收到平台返回的上行消息，默认关闭状态，即不返回上行消息。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+           <property name="toolTipDuration">
+            <number>6000000</number>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLabel{
+	image: url(:/png/tips.png);
+}
+</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_9">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_9" stretch="1,0,0">
+         <item>
+          <widget class="QComboBox" name="comboBox_txidMode">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <item>
+            <property name="text">
+             <string>PkgId 关闭</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>PkgId 开启</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_txidMode">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(47, 105, 235);
+font-size:14px;
+border-style:solid;
+border-width:1px;
+border-color:rgb(47, 105, 235);
+border-radius:4px;
+padding-left:15px;
+padding-right:15px;</string>
+           </property>
+           <property name="text">
+            <string>设置</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_txidMode_get">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(47, 105, 235);
+font-size:14px;
+border-style:solid;
+border-width:1px;
+border-color:rgb(47, 105, 235);
+border-radius:4px;
+padding-left:15px;
+padding-right:15px;</string>
+           </property>
+           <property name="text">
+            <string>获取</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_20">
+         <item>
+          <widget class="QLabel" name="label_gwMode">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(54, 65, 89);</string>
+           </property>
+           <property name="text">
+            <string>gwMode</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_18">
+           <property name="minimumSize">
+            <size>
+             <width>12</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>12</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="toolTip">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;用于无线网关功能设置对子设备连接的准入鉴权功能，支持使用proJectId和设备pk两种方式进行鉴权。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+           <property name="toolTipDuration">
+            <number>6000000</number>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLabel{
+	image: url(:/png/tips.png);
+}
+</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_10">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QComboBox" name="comboBox_gwMode">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>36</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>36</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <item>
+          <property name="text">
+           <string>关闭鉴权</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>使用PK鉴权</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>使用PID鉴权</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_gwMode">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>36</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>36</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(104, 112, 130);
+font-size:14px;
+border-style:solid;
+border-width:1px;
+border-height：20px;
+border-color:rgb(229, 231, 234);
+border-radius:4px;
+padding-left:5px;
+</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_10">
+         <item>
+          <widget class="QPushButton" name="pushButton_gwMode">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(47, 105, 235);
+font-size:14px;
+border-style:solid;
+border-width:1px;
+border-color:rgb(47, 105, 235);
+border-radius:4px;
+padding-left:15px;
+padding-right:15px;</string>
+           </property>
+           <property name="text">
+            <string>设置</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_gwMode_get">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>36</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(47, 105, 235);
+font-size:14px;
+border-style:solid;
+border-width:1px;
+border-color:rgb(47, 105, 235);
+border-radius:4px;
+padding-left:15px;
+padding-right:15px;</string>
+           </property>
+           <property name="text">
+            <string>获取</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
